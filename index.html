@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="Styles/nav.css" />
+    <link rel="stylesheet" href="Styles/header.css" />
+    <link rel="stylesheet" href="Styles/projects.css" />
+    <link rel="stylesheet" href="Styles/contacts.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+
+    <title>Patrick Portfolio</title>
+  </head>
+  <body id="body">
+
+    <nav id="Nav">
+      <div class="nav_container">
+        <input type="checkbox" id="sidebar-active" />
+        <label for="sidebar-active" id="overlay"></label>
+        <div class="ns logo">Bosstrich</div>
+        <ul class="menu_container">
+          <li id="Home"><a href="#">Home</a></li>
+          <li id="About"><a href="#Header">About</a></li>
+          <li id="Resume"><a href="#pands">Projects</a></li>
+          <li id="Contact"><a href="#Contacts">Contact</a></li>
+        </ul>
+        <div class="buttons_container">
+          <button class="border_btn">Lang</button>
+          <button class="solid_btn">HIRE ME</button>
+        </div>
+        <label for="sidebar-active" class="open-sidebar-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+          >
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            />
+          </svg>
+        </label>
+
+        <ul class="sidebar_container">
+          <label for="sidebar-active" class="close-sidebar-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#e8eaed"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              />
+            </svg>
+          </label>
+          <li id="Home"><a href="index.html">Home</a></li>
+          <li id="About"><a href="#Header">About</a></li>
+          <li id="Resume"><a href="Resume">Resume</a></li>
+          <li id="Contact"><a href="#Contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header id="Header">
+      <div class="header_description">
+        <p class="ns text1">Hello, I am</p>
+
+        <h1 class="ns text2">ENGR. PATRICK BEAL B. CALAGAHAN</h1>
+
+        <p class="ns text1">Computer Engineer</p>
+
+        <p class="ns text2">
+          BS in Computer Engineering graduate who specialize in both software
+          and hardware applications, from Embedded Systems & Digital Circuits to
+          UI/UX & Web Development.
+        </p>
+
+        <button class="border_btn cv-btn" id="download__resume__btn">
+          Download CV
+        </button>
+      </div>
+    </header>
+
+    <section id="pands">
+      <div class="project_container">
+        <div class="ps-header">
+          <h1 class="ns ps-headings">Projects and Skills</h1>
+        </div>
+        <div class="main-wrapper">
+          <div class="card s-card">
+            <img
+              class="icon-hovered"
+              src="assets/software_hovered.png"
+              alt=""
+            />
+            <img class="card-icon" src="assets/software.png" />
+            <img class="card-bg" src="assets/software_background.png" alt="" />
+            <h3 class="card-text">Software</h3>
+          </div>
+          <div class="card h-card">
+            <img
+              class="icon-hovered"
+              src="assets/hardware_hovered.png"
+              alt=""
+            />
+            <img class="card-icon" src="assets/hardware.png" />
+            <img class="card-bg" src="assets/hardware_background.png" alt="" />
+            <h3 class="card-text">Hardware</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider1" />
+    <hr class="divider2" />
+
+    <footer id="Contacts">
+      <div class="ns contacts-container">
+        <h1 class="contacts-heading">Contact Me</h1>
+        <div class="description-wrapper">
+          <p class="contacts-description">
+            Interested in hiring me, or you want me to create a personal project
+            for you? Let us connect together with my contact details below
+          </p>
+        </div>
+        <div class="ns details-wrapper">
+          <div class="detail">
+            <img class="d-1" src="assets/phone_icon.png" alt="" />
+            <div class="text-wrapper">
+              <h3>Mobile Number</h3>
+              <p>+63 960 643 7629</p>
+            </div>
+          </div>
+          <div class="detail">
+            <img class="d-2" src="assets/mail_icon.png" alt="mail" />
+            <div class="text-wrapper">
+              <h3>Email Address</h3>
+              <p>patrickbeal.calagahan011@gmail.com</p>
+            </div>
+          </div>
+          <div class="detail">
+            <img class="d-3" src="assets/address_icon.png" alt="" />
+            <div class="text-wrapper">
+              <h3>Address</h3>
+              <p>Cagayan de Oro City</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const cards = document.querySelectorAll(".card");
+
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle(
+              "animate--toAbove",
+              entry.isIntersecting
+            );
+          });
+
+          console.log(entries);
+        },
+        { threshold: 0 }
+      );
+
+      cards.forEach((card) => {
+        observer.observe(card);
+      });
+
+      document
+        .getElementById("download__resume__btn")
+        .addEventListener("click", function () {
+          const link = document.createElement("a");
+          link.href = "/assets/Resume.pdf"; // Replace with the actual path to your PDF file
+          link.download = "Resume.pdf"; // The name of the file to be downloaded
+          link.click();
+        });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("toAbove");
+              observer.unobserve(entry.target);
+            }
+          });
+        });
+
+        const elementsToAnimate = document.querySelectorAll(".card");
+        elementsToAnimate.forEach((element) => {
+          observer.observe(element);
+        });
+      });
+
+      document.querySelector(".s-card").addEventListener("click", () => {
+        window.location.href = "software.html";
+      });
+
+      document.querySelector(".h-card").addEventListener("click", () => {
+        window.location.href = "hardware.html";
+      });
+
+      let sidebarRadioBtn = document.getElementById("sidebar-active");
+
+      sidebarRadioBtn.addEventListener("change", () => {
+        const sidebarIsOpened = sidebarRadioBtn.checked;
+        const scrollbarWidth =
+          window.innerWidth - document.documentElement.clientWidth;
+
+        if (sidebarIsOpened) {
+          document.body.style.overflow = "hidden";
+          document.body.style.paddingRight = `${scrollbarWidth}px`; // Add padding to compensate for scrollbar
+        } else {
+          document.body.style.overflow = "auto";
+          document.body.style.paddingRight = "0"; // Reset padding when scrollbar is back
+        }
+      });
+    </script>
+  </body>
+</html>

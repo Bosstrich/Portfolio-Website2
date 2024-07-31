@@ -1,0 +1,161 @@
+/* Preprocessing */
+
+*{
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+
+    font-size: 1.2rem;
+}
+.menu_container a{
+    text-decoration: none;
+    color: var(--primary);
+
+}
+
+.menu_container a:hover{
+
+    text-decoration: underline;
+    text-underline-position: below;
+    text-underline-offset: 1rem;
+
+}
+
+
+.sidebar_container a:hover{
+
+    background-color: rgba(1, 179, 239, 0.5);
+
+}
+
+:root{
+
+    --primary: rgb(255, 217, 0);
+    --accent: rgb(1, 179, 239);
+    --dark_blue: #12151C;
+    --white: #ffffff;
+
+    --normal: clamp(1.3rem, 2vw + 1rem, 2rem);
+
+}
+
+.ns{
+
+    user-select: none;
+    user-select: none;
+}
+
+
+
+h1{
+
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+}
+
+h2{
+
+    font-size: clamp(1.2rem, 2vw + 2 rem, 2.3rem);
+}
+
+h3{
+
+    font-size: 1.5rem;
+}
+
+.border_btn{
+
+    border: 2px var(--primary) solid;
+    border-radius: 0.5rem;
+    background-color: transparent;
+
+    color: var(--primary);
+    padding: 0.8rem 2rem;
+
+    cursor: pointer;
+    transition: background-color 0.5s;
+
+
+}
+
+.border_btn:hover{
+
+    background-color: var(--primary);
+    color: var(--dark_blue);
+}
+
+.solid_btn{
+
+    background-color: var(--primary);
+    border: var(--primary);
+    border-radius: 0.5rem;
+    color: var(--dark_blue);
+    padding: 0.8rem 2rem;
+
+    cursor: pointer;
+
+}
+
+.solid_btn:hover{
+
+    opacity: 0.9;
+}
+
+
+body{
+
+    background-color: var(--dark_blue);
+}
+
+
+  
+.divider1{
+
+    position: relative;
+    left: 3rem;
+    border: none;
+
+    margin: 2rem auto;
+    width: 50vw;
+    height: 5px;
+    border-radius: 5rem;
+    background-color: var(--primary);
+}
+
+.divider2{
+
+    position: relative;
+    left: -5rem;
+    border: none;
+
+    margin: 1rem auto;
+    width: 50vw;
+    height: 5px;
+
+    border-radius: 5rem;
+    background-color: var(--accent);
+}
+
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    background-color: transparent;
+    height: 0.5rem;
+    width: 0.5rem;
+ 
+}
+
+::-webkit-scrollbar-thumb{
+
+    background-color: var(--accent);
+    border-radius: 20px;
+}

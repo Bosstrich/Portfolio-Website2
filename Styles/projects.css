@@ -1,0 +1,163 @@
+section#pands{
+
+    position: relative;
+}
+
+.project_container{
+
+    margin-top: 1rem;
+}
+
+
+.divider-triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.divider-triangle svg {
+    
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 36px;
+}
+
+.divider-triangle .shape-fill {
+    fill: #12151C;
+}
+/* Project section headings  */
+.ps-header{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15rem;
+    background: url(../assets/projects_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+    
+}
+.ps-headings{
+
+    text-align: center;
+    color: var(--white);
+}
+/* Projects Section Main content */
+.main-wrapper{
+
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 3rem ;
+    justify-content: center;
+    margin-top: -2rem;
+    gap: 5rem;
+}
+
+
+.card{
+
+    position: relative;
+
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    background-color: var(--accent);
+    max-width: 15rem;
+    height: 20rem;
+    border-radius: 1rem;
+
+    transition: all 1s;
+    cursor: pointer;
+
+
+    
+}
+
+
+.card-bg{
+
+    object-fit: cover;
+    max-width: 15rem;
+    border-radius: 1rem;
+    height: 20rem;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.card-icon{
+
+    position: absolute;
+
+    transition: opacity 1s;
+}
+
+.card-text{
+
+    color: var(--dark_blue);
+
+    position: absolute;
+    bottom: 1em;
+    
+    transition: color 1s;
+}
+
+.icon-hovered{
+
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+}
+
+.card-icon, .icon-hovered{
+
+    width: 15rem;
+    transition: all 1s;
+}
+
+.card:hover .card-icon{
+
+    opacity: 0;
+
+}
+
+.card:hover .card-text{
+
+    color: var(--white);
+}
+
+
+.card:hover .icon-hovered , .card:hover .card-bg{
+
+    opacity: 1;
+}
+
+
+.animate--toAbove{
+
+    animation: toAbove 1s ease-out;
+}
+
+
+
+@keyframes toAbove{
+
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+
+
+    }
+    100%{
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
