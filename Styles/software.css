@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+section{
+
+    padding-inline: 3rem;
+}
+
+section#skills{
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+}
+
+.section-headings{
+
+    position: relative;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+
+
+    color: var(--white);
+}
+
+
+.section-headings .skills-text{
+
+    font-size: 4rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    opacity: 0.5;
+    animation: glow 1s infinite alternate;
+
+
+    position: relative;
+    z-index: -1;
+}
+
+.section-headings .s-skills-text{
+
+    position: relative;
+    top: -3.5rem;
+    text-align: center;
+    z-index: 2;
+
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+/* Main Skills */
+
+.skills-container{
+    
+    /* display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    gap: 4rem; */
+
+    
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 2.5rem;
+    padding-bottom: 2rem
+
+    
+}
+
+.skills-container::-webkit-scrollbar{
+
+    display: none;
+}
+
+
+
+.skill{
+
+    flex: 0 0 47%;
+    min-width: 13.5rem;
+    scroll-snap-align: start;
+
+    /* width: 18.5rem; */
+
+}
+
+.skill-wrapper{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.skill-heading{
+
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.skill-percent{
+
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+.skill-progBar{
+
+    margin-top: 1rem;
+    width: 100%;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+.progress{
+
+    width: var(--progress);
+    height: 100%;
+    border-radius: 1rem;
+    background-color: var(--primary);
+    /* animation: progressGrow 1s forwards; */
+
+}
+
+.apps-wrapper{
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: var(--white);
+    margin-top: 1rem;
+}
+
+.apps-wrapper img{
+
+    margin: 5px 5px;
+    width: 1.5em;
+}
+
+
+/* Projects section */
+
+section#projects{
+
+    height: calc(100vh - 5rem);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+}
+
+.headings-wrapper{
+
+    display: flex;
+    justify-content: center;
+}
+
+.section-headings2{
+
+    margin: 0 auto;
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+}
+
+.projects-text{
+
+    color: var(--white);
+    font-family: "Anton", sans-serif;
+    font-weight: 600;
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    opacity: 0.5;
+    text-align: center;
+}
+
+
+
+.s-projects-text{
+
+    word-break: normal;
+    transform: translate(-50%, -50%); 
+    top: 50%; 
+    left: 50%; 
+    position: absolute;
+    color: var(--white);
+    font-size: 1.9rem;
+    width: 100%;
+
+    font-weight: 400;
+}
+
+.slider{
+
+    display: flex;
+    height: 100%;
+    gap: 4rem;
+    overflow: hidden;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+}
+
+.project{
+
+    flex: 0 0 100%;
+    background-color: rgba(18, 21, 28, 0.3);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+
+    height: 100%;
+
+    scroll-snap-align: start;
+
+}
+
+
+.description-wrapper{
+
+    max-width: 50rem;
+    height: 100%;
+    display: flex;
+    margin-top: 1rem;
+    border-radius: 10px;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    transition: background-color 0.3s ease;
+
+}
+
+.project:nth-child(even){
+
+    align-items: flex-end;
+    text-align: end;
+}
+
+
+
+.project .text1{
+    
+    color: var(--primary);
+    font-family: "Lemon", sans-serif;
+}
+
+.project .text2{
+    
+    color: var(--white);
+    font-family: "Lemon", sans-serif;
+    font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
+}
+
+.project .text3{
+
+    color: var(--white);
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
+}
+
+.project:nth-child(even) .buttons-wrapper{
+
+    justify-content: end;
+}
+
+.buttons-wrapper{
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.buttons-wrapper button{
+
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.project-img{
+
+    max-height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.project:nth-child(odd) .project-img{
+
+    right: 0;
+}
+
+.project:nth-child(even) .project-img{
+
+    left: 0;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.9),
+                     0 0 10px rgba(255, 255, 255, 0.9),
+                     0 0 15px rgba(255, 255, 255, 0.9),
+                     0 0 20px rgba(255, 255, 255, 0.9),
+                     0 0 25px rgba(255, 255, 255, 0.9);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+                     0 0 30px rgba(255, 255, 255, 1),
+                     0 0 40px rgba(255, 255, 255, 1),
+                     0 0 50px rgba(255, 255, 255, 1),
+                     0 0 60px rgba(255, 255, 255, 1);
+    }
+}
+
+/* @keyframes progressGrow{
+
+    0%{
+
+        transform: translateX(-100%);
+    }
+    100%{
+
+        transform: translateX(var(--progress));
+
+    }
+
+} */
+
+@media  screen and (max-width: 508px) {
+
+    .project-img{
+
+        height: 15rem;
+        position: absolute;
+        z-index: -1;
+    }
+
+
+
+    
+    .buttons-wrapper{
+
+        margin-top: -1rem;
+        justify-content: center !important;
+
+
+    }
+
+
+}
+
+@media  screen and (max-width: 425px) {
+
+    .skill{
+
+        flex: 0 0 100%;
+    }
+
+    .description-wrapper{
+
+        justify-content: space-evenly;
+        width: 100%;
+        align-items: center;
+
+    }
+
+    .description-wrapper :is(.text2, .text3){
+
+        font-size: 1rem;
+    }
+
+    .description-wrapper .text2{
+        text-align: center;
+    }
+
+
+
+    .description-wrapper .text3{
+        font-size: 1rem;
+        text-align: justify
+    }
+
+    
+
+
+
+}
+
+@media screen and (max-width: 337px) {
+
+    .section-headings .s-skills-text{
+
+        top: -3rem;
+        font-size: 2rem;
+    }
+
+    .section-headings .skills-text{
+
+
+        font-size: 3.5rem;
+    }
+    
+    
+}
+
+@media screen and (max-width: 320px) {
+
+    .project-img{
+
+        inset: 0;
+        margin: auto;
+        position: absolute;
+  
+        z-index: -1;
+    }
+
+
+    section#projects{
+
+        height: 110vh
+    }
+}
